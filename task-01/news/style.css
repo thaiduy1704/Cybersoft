@@ -1,0 +1,19 @@
+body {
+  background-color: gray;
+}
+/* background-color:white;font-size:20px; width:60%" */
+.about_kfc{
+    background-color: white;
+    font-size: 20px;
+    width: 60%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  color: brown;
+}
+img{
+    width: 100%;
+}
+
