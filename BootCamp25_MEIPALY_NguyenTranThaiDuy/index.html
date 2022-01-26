@@ -1,10 +1,24 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meipaly</title>
+
+    <!-- SLICK ANIMATION -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./libs/slick-1.8.1/slick/slick.css"
+    />
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./libs/slick-1.8.1/slick/slick-theme.css"
+    />
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -48,12 +62,160 @@
     <section class="carousel">
       <div class="carousel__content">
         <p>WELCOME TO MEIPALY AGENCY</p>
-        <h1>SMART WEB <br> DESIGN AGENCY</h1>
+        <h1>
+          SMART WEB <br />
+          DESIGN AGENCY
+        </h1>
         <button>READ MORE</button>
         <div class="arrow_down">
           <i class="fa fa-chevron-down fa-3x"></i>
         </div>
       </div>
     </section>
+
+    <!-- SERVICE -->
+    <section class="service" id="service">
+      <div class="service__content">
+        <div class="service__title">
+          <p>SERVICES WE ARE OFFERING</p>
+          <h1>WE DESIGN DIGITAL PRODUCTS THAT HELP GROW BUSINESSES.</h1>
+          <p>
+            We are committed to providing our customers with exceptional service
+            while offering <br />
+            our employees the best training.
+          </p>
+        </div>
+        <div class="service__slider">
+          <div class="slider__content">
+            <div class="item">
+              <i class="fa fa-dice-d6"></i>
+              <p>
+                Aoo Moblie <br />
+                Development
+              </p>
+            </div>
+            <div class="item">
+              <i class="fa fa-dice-d6"></i>
+              <p>
+                Aoo Moblie <br />
+                Development
+              </p>
+            </div>
+            <div class="item">
+              <i class="fa fa-dice-d6"></i>
+              <p>
+                Aoo Moblie <br />
+                Development
+              </p>
+            </div>
+            <div class="item">
+              <i class="fa fa-dice-d6"></i>
+              <p>
+                Aoo Moblie <br />
+                Development
+              </p>
+            </div>
+            <div class="item">
+              <i class="fa fa-dice-d6"></i>
+              <p>
+                Aoo Moblie <br />
+                Development
+              </p>
+            </div>
+            <div class="item">
+              <i class="fa fa-dice-d6"></i>
+              <p>
+                Aoo Moblie <br />
+                Development
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SHOWCASE -->
+    <section class="showcase" id="showcase">
+      <div class="showcase__title">
+        <p>OUR PORTFOLIO</p>
+        <h1>WORK SHOWCASE</h1>
+        <p>
+          We are committed to providing our customers with exceptional service
+          while offering our <br />
+          employees the best training.
+        </p>
+      </div>
+      <div class="showcase__content">
+        <div class="showcase__list">
+          <div class="showcase__item">
+            <img src="./images/showcase_img_1.webp" alt="">
+          </div>
+          <div class="showcase__item">
+            <img src="./images/showcase_img_2.webp" alt="">
+          </div>
+          <div class="showcase__item">
+            <img src="./images/showcase_img_3.webp" alt="">
+          </div>
+          <div class="showcase__item">
+            <img src="./images/showcase_img_7.webp" alt="">
+          </div>
+          <div class="showcase__item">
+            <img src="./images/showcase_img_5.webp" alt="">
+          </div>
+          <div class="showcase__item">
+            <img src="./images/showcase_img_6.webp" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JQUERY -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="./libs/slick-1.8.1/slick/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".slider__content").slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 5,
+          slidesToScroll: 1,
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ],
+        });
+      });
+    </script>
   </body>
 </html>
+

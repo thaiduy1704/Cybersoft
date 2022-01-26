@@ -1,0 +1,150 @@
+:root {
+  --clr-btn-primary: #dd3e6e;
+  --gradient: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+  --clr-btn-hover: #f56c96;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 0.625rem;
+  font-family: "Roboto", sans-serif;
+}
+/* Typography */
+a {
+  font-size: 1.5rem;
+}
+
+/* HEADER */
+
+header {
+  width: 100%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  position: fixed;
+  top: 1rem;
+}
+.logo img {
+  height: auto;
+  width: 100%;
+}
+
+ul li {
+  display: inline;
+  padding: 1rem 2.5rem;
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+  color: black;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+ul li a:hover {
+  color: var(--clr-btn-hover);
+}
+span i {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+button {
+  padding: 2rem 3.5rem;
+  color: white;
+  border-radius: 3rem;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.bg-effect {
+  background-color: var(--clr-btn-primary);
+  background-image: var(--gradient);
+  border: none;
+  background-size: 200%;
+  border-color: transparent;
+}
+
+button:hover {
+  background-position: right center;
+}
+/* CAROUSEL */
+.carousel {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 20rem;
+  background-image: url("../images/pic2.png");
+  background-size: contain;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  justify-items: center;
+}
+.carousel__content {
+  padding-top: 5rem;
+}
+.carousel__content h3 {
+  color: var(--clr-btn-hover);
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+.carousel__content h1 {
+  margin-top: 2rem;
+  font-family: "Poppins", sans-serif;
+  color: black;
+  line-height: 1.1;
+  font-weight: 800;
+  font-size: 7rem;
+}
+p {
+  font-size: 1.8rem;
+  color: #7c7c7c;
+  margin-top: 2rem;
+}
+
+.carousel__content i {
+  margin-right: 1.5rem;
+  color: white;
+  border-radius: 50%;
+  font-size: 1.8rem;
+
+  padding: 1.4rem;
+}
+.content__btn {
+  margin-top: 2rem;
+}
+.carousel__image {
+  width: 100%;
+  position: relative;
+}
+.carousel__image img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel__image--top {
+  position: absolute;
+  z-index: 1;
+ 
+  
+}
+.carousel__image--top img{
+    width: 130%;
+}
+.carousel__image--bottom {
+  position: absolute;
+  z-index: 0;
+}

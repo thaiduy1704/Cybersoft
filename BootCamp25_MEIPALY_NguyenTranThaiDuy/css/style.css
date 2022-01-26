@@ -102,3 +102,90 @@ header {
 .arrow_down {
   margin-top: 2rem;
 }
+/* ---------------SERVICE--------------- */
+.service {
+  background-color: black;
+  padding: 8rem 0;
+  color: white;
+  text-align: center;
+}
+.service__content {
+  letter-spacing: 0.1rem;
+  width: 75%;
+  margin: 0 auto;
+}
+/* p:nth-child thẻ p đầu tiên trong div */
+.service__title p:nth-child(1) {
+  color: #e62b4a;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+.service__title h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+.service__title p:last-of-type {
+  font-size: 1.6rem;
+  color: #888888;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+.slider__content .item {
+  background-color: white;
+  color: #848482;
+  margin: 1rem;
+  height: 23rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+.slider__content .item::after {
+  content: "";
+  /* cho nó có chiều ngang vs chiều cao */
+  display: block;
+  width: 0.5rem;
+  /* Lúc đầu có height 100% nhưng do hover nên chỉ để 0 */
+  height: 0;
+  /* --- */
+  background-color: red;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+.slider__content .item:hover::after {
+  height: 100%;
+  transition: all 0.5s;
+}
+.slider__content .item i {
+  font-size: 5rem;
+}
+.slider__content .item p {
+  font-size: 1.4rem;
+}
+
+.slick-dots li.slick-active button::before {
+  color: red;
+}
+.slick-dots li button::before {
+  color: gray;
+  font-size: 1.8rem;
+}
+/* -----------SHOWCASE-------------- */
+
+.showcase__list {
+  width: 75%;
+  margin: 0 auto;
+  /* dạng lưới */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* cách đều các thẻ  */
+  gap: 1rem;
+}
+
+.showcase__item img {
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
