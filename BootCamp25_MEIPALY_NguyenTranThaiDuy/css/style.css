@@ -157,6 +157,7 @@ header {
   justify-content: center;
   flex-direction: column;
   position: relative;
+  transition: all 0.5s;
 }
 .slider__content .item::after {
   content: "";
