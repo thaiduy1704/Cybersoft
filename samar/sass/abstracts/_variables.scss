@@ -1,0 +1,38 @@
+$color-primary: #f55f8d;
+$color-gradient: linear-gradient(
+  to right,
+  #f55f8d 0,
+  #f8ae56 51%,
+  #f55f8d 100%
+);
+$color-gradientY: linear-gradient(
+  to top,
+  #f55f8d 0,
+  #f8ae56 100%,
+  #f55f8d 100%
+);
+$color-gradient-sec: linear-gradient(
+  to right,
+  #0e1b1f 0,
+  #092933 51%,
+  #0e1b1f 100%
+);
+
+$color-primary-hover: #dd3e6e;
+$color-primary-dark: #7b1534;
+$color-rgba-primary-05: rgba(245, 95, 141, 0.05);
+$color-rgba-primary-1: rgba(245, 95, 141, 0.1);
+$color-rgba-primary-2: rgba(245, 95, 141, 0.2);
+$color-rgba-primary-3: rgba(245, 95, 141, 0.3);
+$color-rgba-primary-4: rgba(245, 95, 141, 0.4);
+$color-rgba-primary-5: rgba(245, 95, 141, 0.5);
+$color-rgba-primary-6: rgba(245, 95, 141, 0.6);
+$color-rgba-primary-7: rgba(245, 95, 141, 0.7);
+$color-rgba-primary-8: rgba(245, 95, 141, 0.8);
+$color-rgba-primary-9: rgba(245, 95, 141, 0.9);
+
+$color-paragraph: #9ea3a5;
+
+$transition: all 0.5s;
+$radius: 1rem;
+
