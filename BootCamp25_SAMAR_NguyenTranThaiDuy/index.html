@@ -4,116 +4,1046 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samar</title>
-    <!-- GOOGLE FONT -->
+    <title>Samar - HTML Template</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./libs/slick-1.8.1/slick/slick.css"
+    />
+    <!-- // Add the new slick-theme.css if you want the default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./libs/slick-1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- OWL -->
+    <link
+      rel="stylesheet"
+      href="./libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
+    />
+
+    <!-- fancybox -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+      integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7.4.1/swiper-bundle.min.css"
+    />
+    <link rel="shortcut icon" href="#" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,900;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+      integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header>
-      <!-- LOGO -->
-      <div class="logo">
-        <img src="./images/logo-2.png" alt="logo" />
-      </div>
-      <nav>
-        <div class="nav__link">
+    <header id="header">
+      <nav class="header">
+        <div class="header__logo">
+          <img src="./images/logo-2.png" alt="logo" />
+        </div>
+        <div class="header__links">
           <ul>
             <li>
-              <a href="#home"
-                >Home <span><i class="fas fa-chevron-down"></i></span
+              <a href="#"
+                ><span>Home</span><i class="fa fa-chevron-down"></i
+              ></a>
+            </li>
+
+            <li>
+              <a href="#"
+                ><span>Pages</span><i class="fa fa-chevron-down"></i
               ></a>
             </li>
             <li>
-              <a href="#page"
-                >Page<span><i class="fas fa-chevron-down"></i></span
+              <a href="#"
+                ><span>Services</span><i class="fa fa-chevron-down"></i
               ></a>
             </li>
             <li>
-              <a href="#service"
-                >Services<span><i class="fas fa-chevron-down"></i></span
+              <a href="#"
+                ><span>Post Layout</span><i class="fa fa-chevron-down"></i
               ></a>
             </li>
             <li>
-              <a href="#post"
-                >Post Layout<span><i class="fas fa-chevron-down"></i></span
+              <a href="#"
+                ><span>Blog</span><i class="fa fa-chevron-down"></i
               ></a>
             </li>
             <li>
-              <a href="#blog"
-                >Blog<span><i class="fas fa-chevron-down"></i></span
-              ></a>
-            </li>
-            <li>
-              <a href="#contact"
-                >Contact Us<span><i class="fas fa-chevron-down"></i></span
+              <a href="#"
+                ><span>Contact Us</span><i class="fa fa-chevron-down"></i
               ></a>
             </li>
           </ul>
-        </div>
-        <div class="nav__btn">
-          <button class="bg-effect">GET A QUOTE</button>
+          <button class="btn">Get a Quote</button>
         </div>
       </nav>
     </header>
+
     <main>
       <section class="carousel">
         <div class="carousel__content">
-          <h3>We are The Best</h3>
-          <h1>
+          <h6 data-aos="fade-up" data-aos-duration="1000">We are The Best</h6>
+          <h1 data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1000">
             Freelance Product <br />
             Designer Running
           </h1>
-          <p>
+          <p data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1500">
             We develop the relationships that underpin the next phase in your
-            <br />
             organization's growth.
           </p>
-          <div class="content__choice">
-            <div class="content__item">
-              <p>
-                <span><i class="fas fa-check bg-effect"></i></span>Master's
-                degree in designing
-              </p>
-            </div>
-            <div class="content__item">
-              <p>
-                <span><i class="fas fa-check bg-effect"></i></span>Outstanding
-                mobile design
-              </p>
-            </div>
-            <div class="content__btn">
-              <button class="bg-effect">GET STARTED</button>
-            </div>
-          </div>
+
+          <ul data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1700">
+            <li class="links-primary">Master's degree in designing</li>
+            <li class="links-primary">Outstanding mobile design</li>
+          </ul>
+          <button data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1900"class="btn">Get started</button>
         </div>
         <div class="carousel__image">
-          <div class="carousel__image--top">
-            <img src="./images/pic1.png" alt="carousel img 1" />
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="2200"class="carousel__image--top">
+            <img  src="./images/pic1.png" alt="" />
           </div>
-          <div class="carousel__image--bottom">
-            <img src="./images/pic3_1.png" alt="carousel img 2" />
+          <div data-aos="fade-up" data-aos-duration="3000" data-aos-delay="1900" class="carousel__image--bot">
+            <img src="./images/pic3_1.png" alt="" />
+          </div>
+          /
+        </div>
+      </section>
+
+      <section class="service" id="service">
+        <div class="service__title">
+          <h6>What We Do Best</h6>
+          <h1>Our Digital Services</h1>
+        </div>
+        <div class="service__content">
+          <div class="service__item">
+            <img src="./images/pic1_3.jpg" alt="service 1" />
+            <h4>Web Development</h4>
+            <p>
+              Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent
+              lacus magna, rhoncus quis magna quis.
+            </p>
+          </div>
+          <div class="service__item">
+            <img src="./images/pic2_2.jpg" alt="service 2" />
+            <h4>Strategy & Research</h4>
+            <p>
+              Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent
+              lacus magna, rhoncus quis magna quis.
+            </p>
+          </div>
+          <div class="service__item">
+            <img src="./images/pic3_2.jpg" alt="service 3" />
+            <h4>Growth Tracking</h4>
+            <p>
+              Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent
+              lacus magna, rhoncus quis magna quis.
+            </p>
           </div>
         </div>
       </section>
+
+      <section class="about" id="about">
+        <div data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1900" class="about__image">
+          <img src="./images/pic1.jpg" alt="about image" />
+        </div>
+        <div data-aos="fade-left" data-aos-duration="3000" data-aos-delay="2100" class="about__content">
+          <h6>About Us</h6>
+          <h1>
+            Build Your <br />
+            Business Website <br />Better
+          </h1>
+
+          <p>
+            Proin laoreet leo vel enim gravida, at porttitor metus ultricies.
+            Cras eu velit enim. Vivamus blandit, dolor ut aliquet rutrum, ex
+            elit mattis sapien, non molestie felis neque et nulla. Sed euismod
+            turpis id nibh suscipit semper. Pellentesque dapibus risus arcu.
+          </p>
+
+          <ul>
+            <li class="links-secondary">
+              We support programs that create advancement opportunities for
+              people.
+            </li>
+            <li class="links-secondary">
+              We support programs that create advancement opportunities for
+              people.
+            </li>
+            <li class="links-secondary">
+              Finally, it all comes down to people. Creating a winning team.
+            </li>
+            <li class="links-secondary">
+              Get a view of events and trends. Be updated on our recent news.
+            </li>
+          </ul>
+          <button class="btn">Learn More</button>
+        </div>
+      </section>
+      <section class="outcome">
+        <div class="outcome__item">
+          <div class="outcome__image">
+            <i class="far fa-smile-beam"></i>
+          </div>
+          <h1><span class="counter">18</span>MI</h1>
+          <p>Satisfied Clients</p>
+        </div>
+        <div class="outcome__item">
+          <div class="outcome__image">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h1><span class="counter">20</span>MI</h1>
+          <p>Project Completed</p>
+        </div>
+        <div class="outcome__item">
+          <div class="outcome__image">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <h1><span class="counter">30</span>MI</h1>
+          <p>Project Launched</p>
+        </div>
+        <div class="outcome__item">
+          <div class="outcome__image">
+            <i class="fas fa-gift"></i>
+          </div>
+          <h1><span class="counter">50</span></h1>
+          <p>Years Experience</p>
+        </div>
+      </section>
+      <section class="story">
+        <div class="story__left">
+          <div data-aos="fade-right" data-aos-duration="3000" data-aos-delay="1900"class="story__title">
+            <h6>Our Features</h6>
+            <h1>Behind The Story Of Samar Agency</h1>
+          </div>
+          <div class="story__box">
+            <div class="story__icon">
+              <i class="far fa-lightbulb"></i>
+            </div>
+            <div class="story__text">
+              <h3>Idea & Analysis Gathering</h3>
+              <p>
+                Maecenas laoreet efficitur sagittis. Aliquam eleifend nisl leo,
+                sit amet consequat augue.
+              </p>
+            </div>
+          </div>
+          <div class="story__box story__box--right">
+            <div class="story__icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="story__text">
+              <h3>Design & Developing</h3>
+              <p>
+                Maecenas laoreet efficitur sagittis. Aliquam eleifend nisl leo,
+                sit amet consequat augue.
+              </p>
+            </div>
+          </div>
+          <div class="story__box">
+            <div class="story__icon">
+              <i class="fas fa-money-bill"></i>
+            </div>
+            <div class="story__text">
+              <h3>Testing & Lunching</h3>
+              <p>
+                Maecenas laoreet efficitur sagittis. Aliquam eleifend nisl leo,
+                sit amet consequat augue.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="story__right">
+          <img src="./images/pic3.png" alt="" />
+        </div>
+      </section>
+      <section class="portfolio">
+        <div class="portfolio__content">
+          <div class="portfolio__title">
+            <h6>Portfolio</h6>
+            <h1>Our latest work</h1>
+          </div>
+          <div class="portfolio__item">
+            <div class="portfolio__item--1 portfolio__shine">
+              <img src="./images/pic1_2.jpg" alt="portfolio 1" />
+
+              <div class="portfolio__overlay">
+                <div class="portfolio__overlay--icon">
+                  <button class="btn">
+                    <a
+                      href="./images/pic1_2.jpg"
+                      data-fancybox="gallery"
+                      data-caption="Caption #1"
+                      ><i class="fa-solid fa-plus"></i
+                    ></a>
+                  </button>
+                </div>
+                <div class="portfolio__overlay--text">
+                  <h5 class="title">
+                    <a href="#">Software Landing</a>
+                  </h5>
+                  <p class="post-author">By <a href="#">John Doe</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="portfolio__item--2 portfolio__shine">
+              <img src="./images/pic2_1.jpg" alt="portfolio 2" />
+              <div class="portfolio__overlay">
+                <div class="portfolio__overlay--icon">
+                  <button class="btn">
+                    <a
+                      href="./images/pic2_1.jpg"
+                      data-fancybox="gallery"
+                      data-caption="Caption #2"
+                      ><i class="fa-solid fa-plus"></i
+                    ></a>
+                  </button>
+                </div>
+                <div class="portfolio__overlay--text">
+                  <h5 class="title">
+                    <a href="#">Software Landing</a>
+                  </h5>
+                  <p class="post-author">By <a href="#">John Doe</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__item--3 portfolio__shine">
+              <img src="./images/pic3_1.jpg" alt="portfolio 3" />
+              <div class="portfolio__overlay">
+                <div class="portfolio__overlay--icon">
+                  <button class="btn">
+                    <a
+                      href="./images/pic3_1.jpg"
+                      data-fancybox="gallery"
+                      data-caption="Caption #3"
+                      ><i class="fa-solid fa-plus"></i
+                    ></a>
+                  </button>
+                </div>
+                <div class="portfolio__overlay--text">
+                  <h5 class="title">
+                    <a href="#">Software Landing</a>
+                  </h5>
+                  <p class="post-author">By <a href="#">John Doe</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__item--4 portfolio__shine">
+              <img src="./images/pic4.jpg" alt="portfolio 4" />
+              <div class="portfolio__overlay">
+                <div class="portfolio__overlay--icon">
+                  <button class="btn">
+                    <a
+                      href="./images/pic4.jpg"
+                      data-fancybox="gallery"
+                      data-caption="Caption #4"
+                      ><i class="fa-solid fa-plus"></i
+                    ></a>
+                  </button>
+                </div>
+                <div class="portfolio__overlay--text">
+                  <h5 class="title">
+                    <a href="#">Software Landing</a>
+                  </h5>
+                  <p class="post-author">By <a href="#">John Doe</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__item--5 portfolio__shine">
+              <img src="./images/pic5.jpg" alt="portfolio 5" />
+              <div class="portfolio__overlay">
+                <div class="portfolio__overlay--icon">
+                  <button class="btn">
+                    <a
+                      href="./images/pic5.jpg"
+                      data-fancybox="gallery"
+                      data-caption="Caption #5"
+                      ><i class="fa-solid fa-plus"></i
+                    ></a>
+                  </button>
+                </div>
+                <div class="portfolio__overlay--text">
+                  <h5 class="title">
+                    <a href="#">Software Landing</a>
+                  </h5>
+                  <p class="post-author">By <a href="#">John Doe</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="portfolio__item--6 portfolio__shine">
+              <img src="./images/pic6.jpg" alt="portfolio 6" />
+              <div class="portfolio__overlay">
+                <div class="portfolio__overlay--icon">
+                  <button class="btn">
+                    <a
+                      href="./images/pic6.jpg"
+                      data-fancybox="gallery"
+                      data-caption="Caption #6"
+                      ><i class="fa-solid fa-plus"></i
+                    ></a>
+                  </button>
+                </div>
+                <div class="portfolio__overlay--text">
+                  <h5 class="title">
+                    <a href="#">Software Landing</a>
+                  </h5>
+                  <p class="post-author">By <a href="#">John Doe</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="plan">
+        <div class="plan__title">
+          <h6>Choose your plan</h6>
+          <h1>Choose your plan</h1>
+          <div class="plan__button">
+            <span class="monthly">Monthly</span>
+            <span class="yearly">Yearly</span>
+          </div>
+        </div>
+        <div class="plan__content">
+          <div class="plan__item">
+            <div class="plan__header">
+              <h2>Basic Plan</h2>
+              <img src="./images/pic4_1.jpg" alt="plan 1" />
+              <h3>$499/<span>year</span></h3>
+            </div>
+            <hr />
+            <div class="plan_details">
+              <ul>
+                <li class="links-tertiary">Graphic Design</li>
+                <li class="links-tertiary">Web Design</li>
+                <li class="links-tertiary">UI/UX</li>
+                <li class="links-tertiary">HTML/CSS</li>
+                <li class="links-tertiary">SEO Marketing</li>
+                <li class="links-tertiary">Business Analysis</li>
+              </ul>
+              <button class="btn">Start Now</button>
+            </div>
+          </div>
+          <div class="plan__item">
+            <div class="plan__header">
+              <h2>Standard Plan</h2>
+              <img src="./images/pic4_1.jpg" alt="plan 1" />
+              <h3>$599/<span>year</span></h3>
+            </div>
+            <hr />
+
+            <div class="plan_details">
+              <ul>
+                <li class="links-tertiary">Graphic Design</li>
+                <li class="links-tertiary">Web Design</li>
+                <li class="links-tertiary">UI/UX</li>
+                <li class="links-tertiary">HTML/CSS</li>
+                <li class="links-tertiary">SEO Marketing</li>
+                <li class="links-tertiary">Business Analysis</li>
+              </ul>
+              <button class="btn">Start Now</button>
+            </div>
+          </div>
+          <div class="plan__item">
+            <div class="plan__header">
+              <h2>Premium Plan</h2>
+              <img src="./images/pic4_1.jpg" alt="plan 1" />
+              <h3>$799/<span>year</span></h3>
+            </div>
+            <hr />
+            <div class="plan_details">
+              <ul>
+                <li class="links-tertiary">Graphic Design</li>
+                <li class="links-tertiary">Web Design</li>
+                <li class="links-tertiary">UI/UX</li>
+                <li class="links-tertiary">HTML/CSS</li>
+                <li class="links-tertiary">SEO Marketing</li>
+                <li class="links-tertiary">Business Analysis</li>
+              </ul>
+              <button class="btn">Start Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonial">
+        <div class="testimonial__wrapper">
+          <div class="testimonial__title">
+            <h6>Testimonial</h6>
+            <h1>What Our Clients Say's</h1>
+          </div>
+
+          <!-- Slider main container -->
+          <div class="swiper testimonial__thumbs-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide testimonial__thumbs-slide">
+                <div class="testimonial__thumbs-content">
+                  <img
+                    src="https://samar.dexignzone.com/xhtml/images/testimonials/pic1.jpg"
+                    alt=""
+                  />
+                  <div class="shape-bx"></div>
+                </div>
+              </div>
+              <div class="swiper-slide testimonial__thumbs-slide">
+                <div class="testimonial__thumbs-content">
+                  <img
+                    src="https://samar.dexignzone.com/xhtml/images/testimonials/pic2.jpg"
+                    alt=""
+                  />
+                  <div class="shape-bx"></div>
+                </div>
+              </div>
+              <div class="swiper-slide testimonial__thumbs-slide">
+                <div class="testimonial__thumbs-content">
+                  <img
+                    src="https://samar.dexignzone.com/xhtml/images/testimonials/pic3.jpg"
+                    alt=""
+                  />
+                  <div class="shape-bx"></div>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <!-- <div class="swiper-pagination"></div> -->
+          </div>
+
+          <div class="swiper testimonial-swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide testimonial-slide">
+                <div class="testimonial-content">
+                  <h4>Cak Dikin 1</h4>
+                  <span>CEO & Founder</span>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cupiditate iste, delectus ad adipisci beatae impedit
+                    voluptates officia omnis sequi dolores.Cupiditate iste,
+                    delectus ad adipisci .
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide testimonial-slide">
+                <div class="testimonial-content">
+                  <h4>Cak Dikin 2</h4>
+                  <span>CEO & Founder</span>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cupiditate iste, delectus ad adipisci beatae impedit
+                    voluptates officia omnis sequi dolores.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide testimonial-slide">
+                <div class="testimonial-content">
+                  <h4>Cak Dikin 3</h4>
+                  <span>CEO & Founder</span>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Cupiditate iste, delectus ad adipisci beatae impedit
+                    voluptates officia omnis sequi dolores.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="blog">
+        <div class="blog__title">
+          <h6>Our Blog</h6>
+          <h1>Latest News & Blog</h1>
+        </div>
+        <div class="blog__content ">
+          <div class="blog__item ">
+            <div class="blog__image">
+              <img src="./images/pic1_1.jpg" alt="blog 1" />
+            </div>
+            <button class="btn">25 March 2021</button>
+            <div class="blog__details">
+              <h3>Maecenas maximus augue eget libero dictum</h3>
+              <p>
+                Nunc convallis sagittis dul eu dictum. Cras sodales id ipsum ac
+                aliquam. Phasellus justo quam.
+              </p>
+              <hr />
+              <div class="blog__info">
+                <span><i class="far fa-user-circle"></i></span> By
+                <span>Jonh Doe</span> &nbsp;&nbsp;&nbsp;
+                <span><i class="far fa-comment-dots"></i></span> Comments 15
+              </div>
+            </div>
+          </div>
+          <div class="blog__item ">
+            <div class="blog__image">
+              <img src="./images/pic2.jpg" alt="blog 2" />
+            </div>
+            <button class="btn">25 March 2021</button>
+            <div class="blog__details">
+              <h3>Maecenas maximus augue eget libero dictum</h3>
+              <p>
+                Nunc convallis sagittis dul eu dictum. Cras sodales id ipsum ac
+                aliquam. Phasellus justo quam.
+              </p>
+              <hr />
+              <div class="blog__info">
+                <span><i class="far fa-user-circle"></i></span> By
+                <span>Jonh Doe</span> &nbsp;&nbsp;&nbsp;
+                <span><i class="far fa-comment-dots"></i></span> Comments 15
+              </div>
+            </div>
+          </div>
+          <div class="blog__item ">
+            <div class="blog__image">
+              <img src="./images/pic3.jpg" alt="blog 3" />
+            </div>
+            <button class="btn">25 March 2021</button>
+            <div class="blog__details">
+              <h3>Maecenas maximus augue eget libero dictum</h3>
+              <p>
+                Nunc convallis sagittis dul eu dictum. Cras sodales id ipsum ac
+                aliquam. Phasellus justo quam.
+              </p>
+              <hr />
+              <div class="blog__info">
+                <span><i class="far fa-user-circle"></i></span> By
+                <span>Jonh Doe</span> &nbsp;&nbsp;&nbsp;
+                <span><i class="far fa-comment-dots"></i></span> Comments 15
+              </div>
+            </div>
+          </div>
+          <!-- <div class="blog__item ">
+            <div class="blog__image">
+              <img src="./images/pic1_1.jpg" alt="blog 1" />
+            </div>
+            <button class="btn">25 March 2021</button>
+            <div class="blog__details">
+              <h3>Maecenas maximus augue eget libero dictum</h3>
+              <p>
+                Nunc convallis sagittis dul eu dictum. Cras sodales id ipsum ac
+                aliquam. Phasellus justo quam.
+              </p>
+              <hr />
+              <div class="blog__info">
+                <span><i class="far fa-user-circle"></i></span> By
+                <span>Jonh Doe</span> &nbsp;&nbsp;&nbsp;
+                <span><i class="far fa-comment-dots"></i></span> Comments 15
+              </div>
+            </div>
+          </div>
+          <div class="blog__item ">
+            <div class="blog__image">
+              <img src="./images/pic2.jpg" alt="blog 2" />
+            </div>
+            <button class="btn">25 March 2021</button>
+            <div class="blog__details">
+              <h3>Maecenas maximus augue eget libero dictum</h3>
+              <p>
+                Nunc convallis sagittis dul eu dictum. Cras sodales id ipsum ac
+                aliquam. Phasellus justo quam.
+              </p>
+              <hr />
+              <div class="blog__info">
+                <span><i class="far fa-user-circle"></i></span> By
+                <span>Jonh Doe</span> &nbsp;&nbsp;&nbsp;
+                <span><i class="far fa-comment-dots"></i></span> Comments 15
+              </div>
+            </div>
+          </div>
+          <div class="blog__item ">
+            <div class="blog__image">
+              <img src="./images/pic3.jpg" alt="blog 3" />
+            </div>
+            <button class="btn">25 March 2021</button>
+            <div class="blog__details">
+              <h3>Maecenas maximus augue eget libero dictum</h3>
+              <p>
+                Nunc convallis sagittis dul eu dictum. Cras sodales id ipsum ac
+                aliquam. Phasellus justo quam.
+              </p>
+              <hr />
+              <div class="blog__info">
+                <span><i class="far fa-user-circle"></i></span> By
+                <span>Jonh Doe</span> &nbsp;&nbsp;&nbsp;
+                <span><i class="far fa-comment-dots"></i></span> Comments 15
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </section>
+      <section class="sponsor owl-carousel owl-theme">
+        <div class="sponsor__image item">
+          <img
+            src="./images/logo-pink1.png"
+            alt="sponsor 1"
+            class="sponsor__image--main"
+          />
+          <img
+            src="./images/logo-light1.png"
+            alt=""
+            class="sponsor__image--hover"
+          />
+        </div>
+        <div class="sponsor__image item">
+          <img
+            src="./images/logo-pink2.png"
+            alt="sponsor 2"
+            class="sponsor__image--main"
+          />
+          <img
+            src="./images/logo-light2.png"
+            alt=""
+            class="sponsor__image--hover"
+          />
+        </div>
+        <div class="sponsor__image item">
+          <img
+            src="./images/logo-pink3.png"
+            alt="sponsor 3"
+            class="sponsor__image--main"
+          />
+          <img
+            src="./images/logo-light3.png"
+            alt=""
+            class="sponsor__image--hover"
+          />
+        </div>
+        <div class="sponsor__image item">
+          <img
+            src="./images/logo-pink4.png"
+            alt="sponsor 4"
+            class="sponsor__image--main"
+          />
+          <img
+            src="./images/logo-light4.png"
+            alt=""
+            class="sponsor__image--hover"
+          />
+        </div>
+        <div class="sponsor__image item">
+          <img
+            src="./images/logo-pink5.png"
+            alt="sponsor 5"
+            class="sponsor__image--main"
+          />
+          <img
+            src="./images/logo-light5.png"
+            alt=""
+            class="sponsor__image--hover"
+          />
+        </div>
+        <div class="sponsor__image item">
+          <img
+            src="./images/logo-pink6.png"
+            alt="sponsor 6"
+            class="sponsor__image--main"
+          />
+          <img
+            src="./images/logo-light6.png"
+            alt=""
+            class="sponsor__image--hover"
+          />
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="footer__sub">
+        <div class="footer__sub--title">
+          <h2>Subscribe To Our Newsletter</h2>
+        </div>
+        <div class="footer__sub--input">
+          <input type="email" name="" id="" placeholder="Your Email Address" />
+          <button class="btn"><i class="fas fa-angle-double-right"></i></button>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer__item">
+          <img
+            src="./images/logo-white.png"
+            alt="logo Samar white"
+            style="margin-bottom: 3rem"
+          />
+          <ul>
+            <li>
+              <i class="fa fa-phone icon-primary"></i>
+              <span>1800-123-4567<br />+91 987-654-3210</span>
+            </li>
+            <li>
+              <i class="fa fa-envelope icon-primary"></i>
+              <span>info@example.com <br />services@gmail.com</span>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt icon-primary"></i>
+              <span
+                >Demo Address #8901 Marmora <br />
+                Road Chi Minh City, Vietnam</span
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h5>Our links</h5>
+          <ul>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Home</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">About Us</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Services</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Team</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h5>Our Services</h5>
+          <ul>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Strategy &amp; Research</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Web Development</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Web Solution</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Digital Marketing</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">App Design </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__item">
+          <h5>Other links</h5>
+          <ul>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">FAQ</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Portfolio</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Privacy Policy</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Terms &amp; Conditions</a>
+            </li>
+            <li>
+              <i class="fas fa-chevron-right icon-secondary"></i
+              ><a href="#">Support </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">
+        <div class="footer__copyright--left">
+          <p>
+            Copyright © 2021 <a href="#">DexignZone</a>. All rights reserved.
+          </p>
+        </div>
+        <div class="footer__copyright--right">
+          <a><i class="fab fa-facebook-f"></i></a>
+          <a><i class="fab fa-instagram"></i></a>
+          <a><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+    <a href="#" class="backToTop cd-top text-replace js-cd-top">
+      <i class="fas fa-arrow-up fa-2x"></i>
+      
+      
+    </a>
+    <!-- ------SCRIPT---- -->
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="./libs/Counting-Up-To-Numerical-Values-On-Scroll-jQuery-Countup-js/jquery.countup.js"></script>
+    <script>
+      //COUNT UP
+      $(".counter").countUp();
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="./libs/WOW-master/dist/wow.min.js"></script>
+
+    <script src="./libs/garand-sticky-73b0fbe/jquery.sticky.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#header").sticky({ topSpacing: 0, zIndex: 10 });
+      });
+    </script>
+    <script>
+      console.log(Swiper);
+
+      window.onload = function () {
+        const thumbSwiper = new Swiper(".testimonial__thumbs-swiper", {
+          watchSlidesProgress: true,
+          spaceBetween: 10,
+          slidesPerView: 3,
+          centeredSlides: true,
+          freeMode: false,
+          autoplay: true,
+          loop: true,
+          speed: 3000,
+        });
+
+        const testimonialSwiper = new Swiper(".testimonial-swiper", {
+          spaceBetween: 10,
+          autoplay: true,
+          loop: true,
+          speed: 3000,
+          thumbs: {
+            swiper: thumbSwiper,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+        });
+      };
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"
+      integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $('[data-fancybox="gallery"]').fancybox({
+        // Options will go here
+        loop: true,
+      });
+    </script>
+    <!-- OWL -->
+    <script src="./libs/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+
+        margin: 10,
+        dots: false,
+        mouseDrag: true,
+
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 5,
+          },
+        },
+      });
+    </script>
+
+<script src="./libs/slick-1.8.1/slick/slick.min.js"></script>
+<!-- <script>
+
+  $(document).ready(function () {
+    $(".blog__content").slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ],
+    });
+  });
+</script> -->
+
+  <script src="./libs/back-to-top-master/assets/js/util.js"></script>
+    <!-- util functions included in the CodyHouse framework -->
+    <script src="./libs/back-to-top-master/assets/js/main.js"></script>
+
+
   </body>
 </html>
