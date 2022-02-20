@@ -141,25 +141,18 @@ li {
     transform: rotate(-3deg);
   }
 }
-.sticky-wrapper is-sticky {
-  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
-  background-color: red;
-}
-
-#header {
-  margin-left: 12rem;
-}
-
 .header {
   width: 100%;
-  position: fixed;
+}
+
+header {
+  transition: all 1s;
 }
 
 .header {
   width: 90%;
   margin: 0 auto;
-  margin-top: 2rem;
-  padding: 1rem;
+  padding-top: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -200,12 +193,9 @@ li {
   font-weight: 500;
 }
 
-.sticky-wrapper is-sticky #header {
-  background-color: red;
-  box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
-}
-
 .carousel {
+  top: -121px;
+  left: 0;
   background-image: url("../../images/pic2.png");
   background-size: 100%;
   padding-top: 16rem;
