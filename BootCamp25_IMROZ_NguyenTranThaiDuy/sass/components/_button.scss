@@ -1,0 +1,40 @@
+.header-btn {
+  border: 2px solid $color-opacity-1;
+  color: white;
+  background-color: transparent;
+  padding: 1.6rem 4rem;
+  border-radius: 500px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    color: white;
+    background-color: $color-primary;
+    border: 2px solid $color-primary;
+  }
+}
+
+.default-btn {
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1.6rem 4rem;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background: $color-primary;
+  border: 2px solid $color-primary;
+  transition: all 0.4s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    background: transparent;
+    border-color: $color-primary;
+    color: $color-primary;
+  }
+}

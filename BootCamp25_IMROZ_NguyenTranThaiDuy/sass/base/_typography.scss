@@ -1,0 +1,63 @@
+h1 {
+  color: white;
+  font-size: 10rem;
+  font-weight: 900;
+  line-height: 112px;
+  font-family: "Montserrat", sans-serif;
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 62px;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  margin-bottom: 1.9rem;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+p.description {
+  font-size: 2.4rem;
+  line-height: 40px;
+  margin: 0;
+  padding: 0 16%;
+  font-weight: 300;
+}
+
+a {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 2rem 0;
+}
+
+p {
+  color: $color-gray;
+  font-size: 1.8rem;
+  line-height: 30px;
+}
+span{
+  color: white;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 18px;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  margin-bottom: 1.2rem;
+  background: linear-gradient(
+    120deg,
+    #1c99fe 20.69%,
+    #7644ff 50.19%,
+    $color-primary 79.69%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}

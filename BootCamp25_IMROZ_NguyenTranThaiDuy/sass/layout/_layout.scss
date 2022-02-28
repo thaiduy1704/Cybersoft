@@ -1,0 +1,136 @@
+// ---------------------HEADER
+header {
+  margin-top: 2rem;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .logo img {
+    max-height: 6rem;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: white;
+    transition: all 0.5s;
+  }
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: $color-primary;
+  }
+  .navbar-nav {
+    padding-right: 4rem;
+    li {
+      margin: 0 1.5rem;
+    }
+  }
+}
+// ---------------------CAROUSEL
+
+.carousel {
+  &-item {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    &:nth-child(1) {
+      background-image: url("../../images/bg-image-22.jpg");
+    }
+    &:nth-child(2) {
+      background-image: url("../../images/bg-image-23.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("../../images/bg-image-24.jpg");
+    }
+    &:nth-child(4) {
+      background-image: url("../../images/bg-image-20.jpg");
+    }
+  }
+  &-indicators {
+    bottom: 10% !important;
+    li {
+      width: 1.3rem !important;
+      height: 1.3rem !important;
+      border-radius: 50%;
+      border: none;
+    }
+  }
+  &-caption {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+// ---------------------SERVICES
+.service {
+  padding: 12rem 0;
+  background: #fff;
+  &-title {
+    span .subtitle {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      line-height: 1.8rem;
+      font-size: 1.6rem;
+      border-radius: 4px;
+      margin-bottom: 1.2rem;
+    }
+    h2 .title {
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 62px;
+      margin-bottom: 20px;
+    }
+  }
+  &-item {
+    margin-top: 3rem;
+    padding: 40px 30px;
+    border-radius: 10px;
+    transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1),
+      box-shadow 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+    .icon {
+      font-size: 45px;
+      font-weight: 400;
+      margin-bottom: 23px;
+
+      text-align: center;
+      border-radius: 100%;
+      display: flex;
+      justify-content: left;
+      .feather-cast{
+        color: $color-primary;
+      }
+      .feather-layers {
+        color: $color-secondary;
+      }
+      .feather-users--1 {
+        color: #12d8df;
+      }
+      .feather-monitor--1 {
+        color: #59c98d;
+      }
+      .feather-users--2{
+        color: #6f41f6;
+      }
+      .feather-monitor--2 {
+        color: #357ff6;
+      }
+     
+
+      svg {
+        width: 45px;
+        height: 45px;
+        
+      }
+    }
+    .content {
+      h3 .title {
+        margin-bottom: 19px;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+    &:hover {
+      box-shadow: 0px 2px 70px 0px rgba(253, 71, 102, 0.05);
+      transform: translateY(-5px);
+    }
+  }
+}
