@@ -1,0 +1,123 @@
+.card {
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1),
+    0px 2px 70px 0px rgba(253, 71, 102, 0.05) 0.65s
+      cubic-bezier(0.05, 0.2, 0.1, 1);
+
+  &::before {
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    display: block;
+    z-index: 1;
+    content: "";
+    background: linear-gradient(
+      to bottom,
+      rgba(15, 15, 15, 0),
+      rgba(15, 15, 15, 0.75) 100%
+    );
+    transition: opacity 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+    cursor: pointer;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    display: block;
+    z-index: 1;
+    content: "";
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      $color-primary 100%
+    );
+    transition: all 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &__thumbnail {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: transform 1s ease, opacity 0.5s ease 0.25s;
+      object-fit: cover;
+    }
+  }
+
+  &:hover img {
+    transform: scale(1.1);
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 2;
+    width: 90%;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 1s ease, opacity 0.5s ease 0.25s;
+    p {
+      color: #ffffff;
+      opacity: 0.7;
+      display: inline-block;
+      margin: 0.5rem;
+      font-size: 1.6rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    h4 {
+      color: white;
+      font-size: 3rem;
+    }
+  }
+  &__content-slideUp {
+    position: absolute;
+    z-index: 3;
+    width: 90%;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    p {
+      color: white;
+      color: #ffffff;
+      opacity: 0.7;
+    }
+    transition: all 1s ease, opacity 0.5s ease 0.25s;
+  }
+  &:hover &__content-slideUp {
+    top: 80%;
+    opacity: 1;
+  }
+
+  &:hover &__content {
+    top: 65%;
+    // @media screen and (max-width: $breakpoint-tab) {
+    //   & {
+    //     top: 55%;
+    //   }
+    // }
+  }
+}
