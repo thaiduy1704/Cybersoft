@@ -41,3 +41,22 @@ a {
 .bg-gray {
   background-color: #f6f6f6;
 }
+.row--35 {
+  margin-left: -35px;
+  margin-right: -35px;
+}
+.mt--30 {
+  margin-top: 30px;
+}
+.tab-style--1 {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid $color-border;
+  border-radius: 50em;
+}
+.mt--10{
+  margin-top: 10px;
+}
+.ptb--120{
+  padding: 120px 0;
+}
