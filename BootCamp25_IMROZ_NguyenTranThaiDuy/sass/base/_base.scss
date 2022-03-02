@@ -11,6 +11,17 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+@media only screen and (max-width: $breakpoint-tab) {
+  html {
+    font-size: 55%;
+  }
+}
+@media only screen and (max-width: $breakpoint-mobile) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   overflow-x: hidden;
 }
@@ -25,7 +36,19 @@ h6 {
 }
 
 section {
-  padding: 11.5rem 4rem 0 4rem;
+  padding: 10rem !important;
+}
+
+@media screen and (max-width: $breakpoint-tab) {
+  section {
+    padding: 3rem !important;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile) {
+  section {
+    padding: 1rem !important;
+  }
 }
 
 img {
@@ -36,54 +59,8 @@ img {
 
 a {
   text-decoration: none !important;
-  transition: all 0.4s ease-in-out 0s;
 }
-.bg-gray {
-  background-color: #f6f6f6;
-}
-.row--35 {
-  margin-left: -35px;
-  margin-right: -35px;
-}
-.mt--30 {
-  margin-top: 30px;
-}
-.tab-style--1 {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid $color-border;
-  border-radius: 50em;
-}
-.mt--10 {
-  margin-top: 10px;
-}
-.ptb--120 {
-  padding: 120px 0;
-}
-.pt--120 {
-  padding-top: 120px;
-}
-.ptb--80 {
-  padding: 80px 0;
-}
-.ptb--70 {
-  padding: 70px 0;
-}
-.mt--60 {
-  margin-top: 60px;
-}
-.mb--30 {
-  margin-bottom: 30px;
-}
-.mt--40 {
-  margin-top: 40px;
-}
-.mb--0 {
-  margin-bottom: 0;
-}
-.footer-p {
-  color: #757575 !important;
-  font-size: 16px !important;
-  line-height: 30px !important;
-  letter-spacing: 1px !important;
+
+li{
+  list-style: none;
 }

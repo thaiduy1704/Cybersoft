@@ -3,6 +3,7 @@
 
 @import "abstracts/animate";
 @import "base/typography";
+@import "base/utillities";
 
 @import "layout/layout";
 
@@ -10,4 +11,6 @@
 @import "components/links";
 @import "components/overlay";
 @import "components/card";
-@import "components/backtotop";
+@import "components/backToTop";
+
+@import "utils/border";

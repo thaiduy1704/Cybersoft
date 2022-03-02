@@ -4,8 +4,7 @@
   overflow: hidden;
   border-radius: 10px;
   transition: transform 0.65s cubic-bezier(0.05, 0.2, 0.1, 1),
-    0px 2px 70px 0px rgba(253, 71, 102, 0.05) 0.65s
-      cubic-bezier(0.05, 0.2, 0.1, 1);
+    $box-shadow 0.65s cubic-bezier(0.05, 0.2, 0.1, 1);
 
   &::before {
     position: absolute;
@@ -73,7 +72,7 @@
     position: absolute;
     z-index: 2;
     width: 90%;
-    top: 65%;
+    top: 75%;
     left: 50%;
     transform: translateX(-50%);
     transition: all 1s ease, opacity 0.5s ease 0.25s;
@@ -89,7 +88,7 @@
 
     h4 {
       color: white;
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
   &__content-slideUp {
@@ -108,16 +107,16 @@
     transition: all 1s ease, opacity 0.5s ease 0.25s;
   }
   &:hover &__content-slideUp {
-    top: 80%;
+    top: 82%;
     opacity: 1;
   }
 
   &:hover &__content {
-    top: 65%;
-    // @media screen and (max-width: $breakpoint-tab) {
-    //   & {
-    //     top: 55%;
-    //   }
-    // }
+    top: 60%;
+    @media screen and (max-width: $breakpoint-tab) {
+      & {
+        top: 55%;
+      }
+    }
   }
 }
