@@ -54,9 +54,36 @@ a {
   border: 1px solid $color-border;
   border-radius: 50em;
 }
-.mt--10{
+.mt--10 {
   margin-top: 10px;
 }
-.ptb--120{
+.ptb--120 {
   padding: 120px 0;
+}
+.pt--120 {
+  padding-top: 120px;
+}
+.ptb--80 {
+  padding: 80px 0;
+}
+.ptb--70 {
+  padding: 70px 0;
+}
+.mt--60 {
+  margin-top: 60px;
+}
+.mb--30 {
+  margin-bottom: 30px;
+}
+.mt--40 {
+  margin-top: 40px;
+}
+.mb--0 {
+  margin-bottom: 0;
+}
+.footer-p {
+  color: #757575 !important;
+  font-size: 16px !important;
+  line-height: 30px !important;
+  letter-spacing: 1px !important;
 }
