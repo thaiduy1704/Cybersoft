@@ -1,0 +1,18 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    margin-top: 100px;
+}
+.thong-bao {
+    background-color: cyan;
+    font-size: 25px;
+    font-weight: bold;  
+    color: black;
+    text-align: center;
+}
