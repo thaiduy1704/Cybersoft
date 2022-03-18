@@ -1,0 +1,68 @@
+.nav-item .nav-link.primary-btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $primary;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+  padding: 1rem 2rem;
+  transition: $transition;
+
+  &:hover {
+    background-color: $primary;
+    color: white;
+  }
+}
+
+.primary-btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: $primary;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+  padding: 1rem 2rem;
+  transition: $transition;
+  text-transform: uppercase;
+  &:hover {
+    background-color: $primary;
+    color: white;
+  }
+}
+
+.secondary-btn {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: $primary;
+  color: white;
+  border: 1px solid $primary;
+  border-radius: $border-radius;
+  padding: 1rem 2rem;
+  transition: $transition;
+  text-transform: uppercase;
+
+  &:hover {
+    color: white;
+    background-color: #d62f58;
+    border-color: #cf2952;
+  }
+}
+
+.secondary-white-btn {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  background-color: #f8f9fa;
+  color: black;
+  border: 1px solid gray;
+  border-radius: $border-radius;
+  padding: 1rem 2rem;
+  transition: $transition;
+
+  &:hover {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+  }
+}

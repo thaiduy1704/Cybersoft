@@ -1,0 +1,55 @@
+.tag {
+  padding: 0.5rem 1.6rem;
+  display: inline-block;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.tag.red-tag {
+  background: rgba(238, 97, 120, 0.2);
+  color: $primary;
+}
+
+.tag.green-tag {
+  background: rgba(0, 128, 0, 0.2);
+  color: #008000;
+}
+
+.tag.purple-tag {
+  background: rgba(0, 0, 255, 0.2);
+  color: #0000ff;
+}
+.tag-date {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  border-bottom: none;
+  padding-bottom: 0px;
+  position: absolute;
+  top: 0;
+  background: $primary;
+  padding: 15px;
+  margin-bottom: 0;
+  right: 0;
+  margin-top: 0;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 40px;
+  height: 5px;
+  margin: 5px 5px;
+  background: #fff;
+  display: block;
+  border: none;
+
+  transition: opacity 0.2s ease;
+  border-radius: 0;
+  position: relative;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: $primary;
+}
