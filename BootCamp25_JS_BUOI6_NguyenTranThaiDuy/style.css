@@ -1,0 +1,46 @@
+.thong__bao--blue {
+  background-color: blue;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+.bg-dark {
+  background-color: black;
+  width: 100%;
+}
+.thong__bao--red {
+  background-color: red;
+  text-align: center;
+  padding: 10px;
+  color: white;
+}
+.thongBao--1 {
+  background-color: rgb(136, 194, 136);
+  width: 100%;
+  height: 2rem;
+}
+
+.thongBao2 {
+  background-color: pink;
+  width: 100%;
+  height: 2rem;
+}
+.thongBao2 span {
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: red;
+  font-weight: bold;
+}
+.thongBao3 {
+  background-color: pink;
+  width: 100%;
+  height: 2rem;
+}
+.thongBao3 span {
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  color: red;
+  font-weight: bold;
+}
