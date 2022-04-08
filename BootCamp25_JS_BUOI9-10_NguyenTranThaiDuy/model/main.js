@@ -160,7 +160,8 @@ function renderTable(data) {
         <td>${employee.role}</td>
         <td>${employee.sumSalary}</td>
         <td>${employee.rank}</td>
-        </tr>  
+         <td> <button class="btn btn-danger" onclick="deleteEmploy('${employee.user}')">X</button></td>
+        </tr>
         `;
     }
     getElement("tableDanhSach").innerHTML = content;
@@ -172,3 +173,9 @@ getElement("btnThemNV").addEventListener("click", function () {
     employeeList.addEmployee(employee);
     renderTable(employeeList.data);
 });
+
+function deleteEmploy(user) {
+    employeeList.deleteEmployee(user);
+    renderTable(employeeList.data);
+
+}

@@ -72,25 +72,40 @@ function Validation() {
         }
     };
     this.checkValidDate = function (value, divId) {
-        var regex = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+        var regex = /^\d{2}\/\d{2}\/\d{4}$/;
+
         if (value.match(regex) === null) {
-            return true;
-        }
-        var [month, day, year] = value.split("/");
-
-        var isoFormattedStr = `${year}-${month}-${day}`;
-
-        var date = new Date(isoFormattedStr);
-        var timestamp = date.getTime();
-
-        if (typeof timestamp !== "number" || Number.isNaN(timestamp)) {
             getElement(divId).innerHTML =
-                "(*)Vui lòng nhập đúng định dạng ngày 'MM/DD/YY'";
+                "(*)Vui lòng nhập đúng định dạng ngày 'MM/DD/YYYY'";
             getElement(divId).style.display = "block";
             return true;
+        }
 
-        } else if (date.toISOString().startsWith(isoFormattedStr)) {
-            return false;
+        const parts = value.split("/");
+        const day = parseInt(parts[1], 10);
+        const month = parseInt(parts[0], 10);
+        const year = parseInt(parts[2], 10);
+
+        if (year < 1000 || year > 3000 || month === 0 || month > 12) {
+            getElement(divId).innerHTML =
+                "(*)Vui lòng nhập đúng định dạng ngày 'MM/DD/YYYY'";
+            getElement(divId).style.display = "block";
+            return true;
+        }
+
+        const monthLength = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        if (year % 400 === 0 || (year % 100 !== 0 && year % 4 === 0)) {
+            monthLength[1] = 29;
+        }
+
+        if (day > 0 && day <= monthLength[month - 1]) {
+            return false
+        } else {
+            getElement(divId).innerHTML =
+                "(*)Vui lòng nhập đúng Ngày'";
+            getElement(divId).style.display = "block";
+            return true;
         }
     };
     this.checkValidSalary = function (value, divId) {
