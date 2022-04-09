@@ -3,7 +3,7 @@ function Employee({
   _name,
   _email,
   _password,
-  _date,
+  _date,  
   _salaryBasic,
   _role,
   _workTime,
@@ -17,7 +17,8 @@ function Employee({
   this.role = _role;
   this.workTime = _workTime;
   this.sumSalary = 0;
-  this.rank = "";
+  this.rank = ""
+
   this.finalSalary = function () {
     if (this.role == "Sếp") {
       this.sumSalary = this.salaryBasic * 3;
@@ -33,6 +34,7 @@ function Employee({
     } else if ((this.workTime >= 160) && (this.workTime < 176)) {
       this.rank = "Khá"
     } else if (this.workTime < 160) {
+      console.log("trinaskdfnjqsn cq");
       this.rank = "Trung Bình"
     }
   };

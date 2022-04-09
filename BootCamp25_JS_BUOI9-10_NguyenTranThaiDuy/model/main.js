@@ -2,15 +2,15 @@
 
 const data = [
     {
-        _user: "thaiduy1704",
+        _user: "thai",
         _name: "Thai Duy",
         _email: "18520668@gm.uit.edu.vn",
         _password: "duy171900",
         _date: "04/07/2005",
         _salaryBasic: "2500000",
         _role: "Sếp",
-        _workTime: "150",
-        _sumSalary: "1152124",
+        _workTime: "176",
+
     },
     {
         _user: "tuanloc2305",
@@ -20,8 +20,8 @@ const data = [
         _date: "04/07/2015",
         _salaryBasic: "3500000",
         _role: "Trưởng phòng",
-        _workTime: "200",
-        _sumSalary: "1152124",
+        _workTime: "160",
+
     },
     {
         _user: "levy1905",
@@ -31,8 +31,8 @@ const data = [
         _date: "17/07/2006",
         _salaryBasic: "2500000",
         _role: "Nhân viên",
-        _workTime: "140",
-        _sumSalary: "1152124",
+        _workTime: "192",
+
     },
     {
         _user: "thaiduy17042000",
@@ -42,8 +42,7 @@ const data = [
         _date: "04/07/2005",
         _salaryBasic: "2500000",
         _role: "Sếp",
-        _workTime: "210",
-        _sumSalary: "1152124",
+        _workTime: "150",
     },
 ];
 
@@ -60,10 +59,19 @@ employeeList.addEmployee(user2);
 employeeList.addEmployee(user3);
 employeeList.addEmployee(user4);
 
+for (var i = 0; i < employeeList.data.length; i++) {
+    employeeList.data[i].finalRank();
+    employeeList.data[i].finalSalary();
+}
+
 //
 
 function getElement(id) {
     return document.getElementById(id);
+}
+function convertDate(date) {
+    var [month, day, year] = date.split("/");
+    return `${day}/${month}/${year}`;
 }
 
 function getInfoEmployee() {
@@ -71,7 +79,8 @@ function getInfoEmployee() {
     var _name = getElement("name").value;
     var _email = getElement("email").value;
     var _password = getElement("password").value;
-    var _date = getElement("datepicker").value;
+    var _date = convertDate(getElement("datepicker").value);
+
     var _salaryBasic = getElement("luongCB").value;
     var _role = getElement("chucvu").value;
     var _workTime = getElement("gioLam").value;
@@ -100,8 +109,7 @@ function getInfoEmployee() {
         isValid = false;
     } else if (validation.checkNumberOfDigit(_password, "tbMatKhau", 6, 10)) {
         isValid = false;
-    }
-    else if (validation.checkValidPassword(_password, "tbMatKhau")) {
+    } else if (validation.checkValidPassword(_password, "tbMatKhau")) {
         isValid = false;
     }
 
@@ -140,6 +148,8 @@ function getInfoEmployee() {
             _role,
             _workTime,
         });
+
+
         employee.finalSalary();
         employee.finalRank();
         return employee;
@@ -152,7 +162,7 @@ function renderTable(data) {
     for (var i = 0; i < data.length; i++) {
         var employee = data[i];
         content += `
-        <tr>
+        <tr class = "border-bottom">
         <td>${employee.user}</td>
         <td>${employee.name}</td>
         <td>${employee.email}</td>
@@ -160,7 +170,9 @@ function renderTable(data) {
         <td>${employee.role}</td>
         <td>${employee.sumSalary}</td>
         <td>${employee.rank}</td>
-         <td> <button class="btn btn-danger" onclick="deleteEmploy('${employee.user}')">X</button></td>
+        <td class="d-flex border-0"> <button class="btn btn-danger mr-1 " onclick="deleteEmploy('${employee.user}') ">X</button><button class="btn btn-success" id="btnThem"
+                    data-toggle="modal"
+                    data-target="#myModal" onclick="updateEmploy('${employee.user}')">-</button></td>
         </tr>
         `;
     }
@@ -177,5 +189,33 @@ getElement("btnThemNV").addEventListener("click", function () {
 function deleteEmploy(user) {
     employeeList.deleteEmployee(user);
     renderTable(employeeList.data);
-
 }
+function updateEmploy(user) {
+    var employee = employeeList.getInfoEmployee(user);
+
+    getElement("tknv").value = employee.user;
+    getElement("tknv").disabled = true;
+    getElement("name").value = employee.name;
+    getElement("email").value = employee.email;
+    getElement("password").value = employee.password;
+    getElement("datepicker").value = convertDate(employee.date);
+
+    getElement("luongCB").value = employee.salaryBasic;
+    getElement("chucvu").value = employee.role;
+    getElement("gioLam").value = employee.workTime;
+    renderTable(employeeList.data);
+}
+getElement("btnCapNhat").addEventListener("click", function () {
+
+    var employee = getInfoEmployee();
+    console.log("data update :" + employee);
+    employeeList.updateEmployee(employee);
+    renderTable(employeeList.data);
+})
+getElement("searchName").addEventListener("keyup", function () {
+    var keyName = getElement("searchName").value;
+    console.log(keyName);
+    var findData = employeeList.findEmployeeByRank(keyName);
+    renderTable(findData);
+
+})

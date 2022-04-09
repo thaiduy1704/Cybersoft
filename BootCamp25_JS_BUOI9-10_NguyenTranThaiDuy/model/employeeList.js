@@ -15,9 +15,36 @@ function EmployeeList() {
         return index;
     };
     this.deleteEmployee = function (user) {
-        var index = this.findPositionOfList(user)
+        var index = this.findPositionOfList(user);
         if (index !== -1) {
             this.data.splice(index, 1);
         }
-    }
+    };
+    this.getInfoEmployee = function (user) {
+        var index = this.findPositionOfList(user);
+        if (index !== -1) {
+            return this.data[index];
+        }
+        return null;
+    };
+    this.updateEmployee = function (employee) {
+        var user = employee.user;
+        var index = this.findPositionOfList(user);
+        console.log("index" + index);
+        if (index !== -1) {
+            this.data[index] = employee;
+        }
+    };
+
+    this.findEmployeeByRank = function (keyword) {
+        var findData = [];
+        for (var i = 0; i < this.data.length; i++) {
+            var employee = this.data[i];
+
+            if (employee.rank.toLowerCase().indexOf(keyword.toLowerCase()) !== -1) {
+                findData.push(employee);
+            }
+        }
+        return findData;
+    };
 }
