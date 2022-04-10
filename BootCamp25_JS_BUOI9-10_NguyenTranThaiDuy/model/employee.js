@@ -3,7 +3,7 @@ function Employee({
   _name,
   _email,
   _password,
-  _date,  
+  _date,
   _salaryBasic,
   _role,
   _workTime,

@@ -65,7 +65,7 @@ for (var i = 0; i < employeeList.data.length; i++) {
 }
 
 //
-
+getLocalStorage();
 function getElement(id) {
     return document.getElementById(id);
 }
@@ -184,11 +184,13 @@ getElement("btnThemNV").addEventListener("click", function () {
     var employee = getInfoEmployee();
     employeeList.addEmployee(employee);
     renderTable(employeeList.data);
-});
+    setLocalStorage();
+})
 
 function deleteEmploy(user) {
     employeeList.deleteEmployee(user);
     renderTable(employeeList.data);
+    setLocalStorage();
 }
 function updateEmploy(user) {
     var employee = employeeList.getInfoEmployee(user);
@@ -211,6 +213,7 @@ getElement("btnCapNhat").addEventListener("click", function () {
     console.log("data update :" + employee);
     employeeList.updateEmployee(employee);
     renderTable(employeeList.data);
+    setLocalStorage();
 })
 getElement("searchName").addEventListener("keyup", function () {
     var keyName = getElement("searchName").value;
@@ -219,3 +222,18 @@ getElement("searchName").addEventListener("keyup", function () {
     renderTable(findData);
 
 })
+
+
+function setLocalStorage() {
+    var dataString = JSON.stringify(employeeList.data);
+    localStorage.setItem("EmployeeList", dataString)
+}
+
+function getLocalStorage() {
+    var dataString = localStorage.getItem("EmployeeList")
+    if (dataString) {
+        var dataJson = JSON.parse(dataString);
+        employeeList.data = dataJson
+        renderTable(employeeList.data);
+    }
+}
