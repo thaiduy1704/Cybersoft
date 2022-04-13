@@ -8,6 +8,7 @@
                 -checkValidName
 
     Phát sinh : 
+                -checkUser
                 -checkValidDate
                 -checkValidRole
                 -checkUniqueUser
@@ -27,6 +28,21 @@ function Validation() {
         getElement(divId).style.display = "none";
         return false;
     };
+
+    this.checkUser = function (value, divId) {
+        var regex = /^[0-9]+$/;
+        if (regex.test(value)) {
+            getElement(divId).style.display = "none";
+            return false;
+
+        } else {
+            getElement(divId).innerHTML = `(*)Vui lòng chỉ có số`;
+            getElement(divId).style.display = "block";
+            return true;
+        }
+
+
+    }
     this.checkNumberOfDigit = function (value, divId, start, end) {
         var count = value.trim().length;
         if (count < start || count > end) {

@@ -17,7 +17,7 @@ function Employee({
   this.role = _role;
   this.workTime = _workTime;
   this.sumSalary = 0;
-  this.rank = ""
+  this.rank = "";
 
   this.finalSalary = function () {
     if (this.role == "Sếp") {
@@ -28,14 +28,13 @@ function Employee({
   };
   this.finalRank = function () {
     if (this.workTime >= 192) {
-      this.rank = "Xuất sắc"
-    } else if ((this.workTime >= 176) && (this.workTime < 192)) {
-      this.rank = "Giỏi"
-    } else if ((this.workTime >= 160) && (this.workTime < 176)) {
-      this.rank = "Khá"
+      this.rank = "Xuất sắc";
+    } else if (this.workTime >= 176 && this.workTime < 192) {
+      this.rank = "Giỏi";
+    } else if (this.workTime >= 160 && this.workTime < 176) {
+      this.rank = "Khá";
     } else if (this.workTime < 160) {
-      console.log("trinaskdfnjqsn cq");
-      this.rank = "Trung Bình"
+      this.rank = "Trung Bình";
     }
   };
 }

@@ -89,6 +89,9 @@ function getInfoEmployee() {
 
     if (validation.checkEmpty(_user, "tbTKNV", true)) {
         isValid = false;
+    } else if (validation.checkUser(_user, "tbTKNV")) {
+        isValid = false;
+
     } else if (validation.checkNumberOfDigit(_user, "tbTKNV", 4, 6)) {
         isValid = false;
     } else if (!validation.checkUniqueUser(_user, "tbTKNV", employeeList.data)) {
@@ -172,9 +175,9 @@ function renderTable(data) {
         <td>${employee.role}</td>
         <td>${employee.sumSalary}</td>
         <td>${employee.rank}</td>
-        <td class="d-flex border-0"> <button class="btn btn-danger mr-1 " onclick="deleteEmploy('${employee.user}') ">X</button><button class="btn btn-success" id="btnThem"
+        <td class="d-flex border-0"> <button class="btn btn-danger mr-1 " onclick="deleteEmploy('${employee.user}') ">Xóa</button><button class="btn btn-success" id="btnThem"
                     data-toggle="modal"
-                    data-target="#myModal" onclick="updateEmploy('${employee.user}')">-</button></td>
+                    data-target="#myModal" onclick="updateEmploy('${employee.user}')">Sửa</button></td>
         </tr>
         `;
     }
@@ -212,14 +215,13 @@ function updateEmploy(user) {
 getElement("btnCapNhat").addEventListener("click", function () {
 
     var employee = getInfoEmployee();
-    console.log("data update :" + employee);
     employeeList.updateEmployee(employee);
     renderTable(employeeList.data);
     setLocalStorage();
 })
 getElement("searchName").addEventListener("keyup", function () {
     var keyName = getElement("searchName").value;
-    console.log(keyName);
+    
     var findData = employeeList.findEmployeeByRank(keyName);
     renderTable(findData);
 
