@@ -10,6 +10,7 @@
     Phát sinh : 
                 -checkValidDate
                 -checkValidRole
+                -checkUniqueUser
 */
 
 function Validation() {
@@ -38,7 +39,8 @@ function Validation() {
         }
     };
     this.checkValidName = function (value, divId) {
-        if (/^[A-Z ]+$/i.test(value)) {
+        var regex = new RegExp("^[a-zA-Z_ÀÁÂÃÈÉÊẾÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶ" + "ẸẺẼỀỀỂưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợ" + "ụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\\s]+$");
+        if (regex.test(value)) {
             getElement(divId).style.display = "none";
             return false;
         } else {
@@ -138,4 +140,18 @@ function Validation() {
             return true;
         }
     };
+    this.checkUniqueUser = function (value, divId, arr) {
+        for (var i = 0; i < arr.length; i++) {
+            var employee = arr[i];
+            if (value === employee.user) {
+                getElement(divId).innerHTML =
+                    "(*)Tài khoản bị trùng";
+                getElement(divId).style.display = "block";
+                return false;
+
+
+            }
+        }
+        return true;
+    }
 }

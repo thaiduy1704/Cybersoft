@@ -91,6 +91,8 @@ function getInfoEmployee() {
         isValid = false;
     } else if (validation.checkNumberOfDigit(_user, "tbTKNV", 4, 6)) {
         isValid = false;
+    } else if (!validation.checkUniqueUser(_user, "tbTKNV", employeeList.data)) {
+        isValid = false
     }
 
     if (validation.checkEmpty(_name, "tbTen")) {
