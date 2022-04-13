@@ -201,7 +201,7 @@ function updateEmploy(user) {
     var employee = employeeList.getInfoEmployee(user);
 
     getElement("tknv").value = employee.user;
-    getElement("tknv").disabled = true;
+
     getElement("name").value = employee.name;
     getElement("email").value = employee.email;
     getElement("password").value = employee.password;
@@ -221,7 +221,7 @@ getElement("btnCapNhat").addEventListener("click", function () {
 })
 getElement("searchName").addEventListener("keyup", function () {
     var keyName = getElement("searchName").value;
-    
+
     var findData = employeeList.findEmployeeByRank(keyName);
     renderTable(findData);
 
