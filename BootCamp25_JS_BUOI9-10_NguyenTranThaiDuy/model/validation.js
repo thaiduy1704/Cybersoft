@@ -118,6 +118,7 @@ function Validation() {
         }
 
         if (day > 0 && day <= monthLength[month - 1]) {
+            getElement(divId).style.display = "none";
             return false
         } else {
             getElement(divId).innerHTML =
@@ -129,6 +130,7 @@ function Validation() {
     this.checkValidSalary = function (value, divId) {
         var salary = parseInt(value);
         if (1000000 <= salary && salary <= 20000000) {
+            getElement(divId).style.display = "none";
             return false;
         } else {
             getElement(divId).innerHTML =
@@ -139,6 +141,7 @@ function Validation() {
     };
     this.checkValidRole = function (value, divId) {
         if (value == "Sếp" || value == "Trưởng phòng" || value == "Nhân viên") {
+            getElement(divId).style.display = "none";
             return false;
         } else {
             getElement(divId).innerHTML = "(*)Vui lòng chọn chức vụ ";
@@ -149,6 +152,7 @@ function Validation() {
     this.checkValidWorkTime = function (value, divId) {
         var workTime = parseInt(value);
         if (workTime >= 80 && workTime <= 200) {
+            getElement(divId).style.display = "none";
             return false;
         } else {
             getElement(divId).innerHTML = "(*)Thời gian chỉ từ 80-200h";
