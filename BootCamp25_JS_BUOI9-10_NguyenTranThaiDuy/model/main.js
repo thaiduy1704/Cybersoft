@@ -10,7 +10,6 @@ const data = [
         _salaryBasic: "2500000",
         _role: "Sếp",
         _workTime: "176",
-
     },
     {
         _user: "tuanloc2305",
@@ -21,7 +20,6 @@ const data = [
         _salaryBasic: "3500000",
         _role: "Trưởng phòng",
         _workTime: "160",
-
     },
     {
         _user: "levy1905",
@@ -32,7 +30,6 @@ const data = [
         _salaryBasic: "2500000",
         _role: "Nhân viên",
         _workTime: "192",
-
     },
     {
         _user: "thaiduy17042000",
@@ -74,7 +71,7 @@ function convertDate(date) {
     return `${day}/${month}/${year}`;
 }
 
-function getInfoEmployee() {
+function getInfoEmployee(isCheckUnique = true) {
     var _user = getElement("tknv").value;
     var _name = getElement("name").value;
     var _email = getElement("email").value;
@@ -91,11 +88,12 @@ function getInfoEmployee() {
         isValid = false;
     } else if (validation.checkUser(_user, "tbTKNV")) {
         isValid = false;
-
     } else if (validation.checkNumberOfDigit(_user, "tbTKNV", 4, 6)) {
         isValid = false;
-    } else if (!validation.checkUniqueUser(_user, "tbTKNV", employeeList.data)) {
-        isValid = false
+    } else if (isCheckUnique == true) {
+        if (!validation.checkUniqueUser(_user, "tbTKNV", employeeList.data)) {
+            isValid = false;
+        }
     }
 
     if (validation.checkEmpty(_name, "tbTen")) {
@@ -154,7 +152,6 @@ function getInfoEmployee() {
             _workTime,
         });
 
-
         employee.finalSalary();
         employee.finalRank();
         return employee;
@@ -186,11 +183,11 @@ function renderTable(data) {
 renderTable(employeeList.data);
 
 getElement("btnThemNV").addEventListener("click", function () {
-    var employee = getInfoEmployee();
+    var employee = getInfoEmployee(true);
     employeeList.addEmployee(employee);
     renderTable(employeeList.data);
     setLocalStorage();
-})
+});
 
 function deleteEmploy(user) {
     employeeList.deleteEmployee(user);
@@ -201,7 +198,7 @@ function updateEmploy(user) {
     var employee = employeeList.getInfoEmployee(user);
 
     getElement("tknv").value = employee.user;
-
+    getElement("tknv").disabled = true;
     getElement("name").value = employee.name;
     getElement("email").value = employee.email;
     getElement("password").value = employee.password;
@@ -213,31 +210,28 @@ function updateEmploy(user) {
     renderTable(employeeList.data);
 }
 getElement("btnCapNhat").addEventListener("click", function () {
-
-    var employee = getInfoEmployee();
+    var employee = getInfoEmployee(false);
     employeeList.updateEmployee(employee);
     renderTable(employeeList.data);
     setLocalStorage();
-})
+});
 getElement("searchName").addEventListener("keyup", function () {
     var keyName = getElement("searchName").value;
 
     var findData = employeeList.findEmployeeByRank(keyName);
     renderTable(findData);
-
-})
-
+});
 
 function setLocalStorage() {
     var dataString = JSON.stringify(employeeList.data);
-    localStorage.setItem("EmployeeList", dataString)
+    localStorage.setItem("EmployeeList", dataString);
 }
 
 function getLocalStorage() {
-    var dataString = localStorage.getItem("EmployeeList")
+    var dataString = localStorage.getItem("EmployeeList");
     if (dataString) {
         var dataJson = JSON.parse(dataString);
-        employeeList.data = dataJson
+        employeeList.data = dataJson;
         renderTable(employeeList.data);
     }
 }
