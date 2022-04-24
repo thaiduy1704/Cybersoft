@@ -1,0 +1,65 @@
+#footer {
+  background-image: url("../../images/footer_background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+  color: $color--white !important;
+  .bar__icon a {
+    @include styleIcon($color--black, $color--white);
+  }
+  .widget-services {
+    margin-left: 6rem;
+  }
+  .widget-services h5 {
+    @include styleText($color--white, 24px, $fw-5);
+    padding-bottom: 20px;
+  }
+  .widget-content li {
+    color: #fff !important;
+    font-size: $font-size--small;
+    padding-bottom: 12px;
+    padding-top: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    & a {
+      color: #fff !important;
+      font-size: $font-size--small;
+    }
+  }
+
+  .widget-add li {
+    color: #fff !important;
+    font-size: $font-size--small;
+    padding-bottom: 12px;
+  }
+  .widget-content {
+    a:hover {
+      opacity: 0.8;
+    }
+  }
+  .widget-content-btn {
+    .button {
+      @include styleButton(
+        240px,
+        48px,
+        $color--black,
+        $color--white,
+        $color--white,
+        $color--btn-primary
+      );
+    }
+    .email input {
+      color: #fff;
+      width: 240px;
+      height: 48px;
+      border: 1px solid rgba(255, 255, 255, 0.621);
+      background: $color--btn-primary;
+      border-radius: 50px;
+      &::placeholder {
+        color: #fff;
+        text-align: center;
+        font-size: $font-size--small;
+      }
+    }
+  }
+}

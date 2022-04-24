@@ -1,0 +1,75 @@
+.header-default {
+  /*  Mới đầu để background của header là transparent  */
+  background: transparent;
+  /*  Để position absolute không ảnh hưởng đến các phần tử bên dưới  */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header-onscroll {
+  /*  để background white để thấy được header  */
+  background: white;
+  /*  thêm box shadow tăng độ sâu  */
+  box-shadow: 0 0 50px 0 rgb(0 0 0 / 10%);
+  /*  fixed scroll theo trang web  */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+  img {
+    display: none;
+  }
+  padding-top: 1rem;
+}
+.header-default .nav-item {
+  padding: 55px 15px;
+  transition: all 0.5s;
+}
+
+.header-onscroll .nav-item {
+  padding: 35px 15px;
+  transition: all 0.5s;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+
+  .navbar {
+    padding-top: 0;
+  }
+  .navbar-nav {
+    .nav-item {
+      padding: 0 20px;
+    }
+
+    .nav-link {
+      @include styleText($color--black, $font-size--small, $fw-5);
+
+      &:hover {
+        color: $color--btn-primary !important;
+      }
+    }
+  }
+
+  .topbarmenu {
+    .bar__icon a {
+      @include styleIcon($color--btn-primary, $color--black);
+    }
+
+    .button {
+      @include styleButton(
+        176px,
+        36px,
+        $color--white,
+        $color--btn-primary,
+        $color--btn-primary,
+        $color--white
+      );
+    }
+  }
+}

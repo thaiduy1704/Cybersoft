@@ -1,0 +1,18 @@
+.carousel {
+  background-image: url("../../images/yellow_top_wave_01.png"),
+    url("../../images/Violet_top_left_wave.png");
+  background-position: top, bottom;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain;
+
+  &__title {
+    h3 {
+      @include styleText($color--btn-primary, $font-size--medium, $fw-4);
+    }
+    h1 {
+      @include styleText($color--black, $font-size--x-large, $fw-5);
+    }
+  }
+  &__content {
+  }
+}

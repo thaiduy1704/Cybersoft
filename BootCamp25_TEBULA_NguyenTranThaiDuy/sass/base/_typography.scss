@@ -1,0 +1,117 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  letter-spacing: 1.5;
+}
+
+p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+li a {
+  text-decoration: none;
+  color: #070120;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1.35;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  color: black;
+  font-size: 7rem;
+  font-weight: 700;
+
+  letter-spacing: 1.5;
+}
+
+h4 {
+  color: black;
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h6 {
+  color: #f55f8d;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+p,
+li {
+  font-size: 1.8rem;
+}
+@mixin styleText($color, $fs, $fw) {
+  color: $color !important;
+  font-size: $fs;
+  font-weight: $fw;
+}
+
+@mixin styleIcon($hoverColor, $color) {
+  margin: 0 4px;
+  @include styleText($color, $font-size--small, $fw-2);
+  &:hover {
+    color: $hoverColor !important;
+  }
+}
+.ml-26 {
+  margin-left: 26rem !important ;
+}
+
+@mixin styleButton($w1, $h1, $color1, $cbg1, $color2, $cbg2) {
+  position: relative;
+  width: $w1;
+  height: $h1;
+  color: $color1;
+  border-radius: 50px;
+  background-color: $cbg1;
+  text-align: center;
+  overflow: hidden;
+  z-index: 10;
+  cursor: pointer;
+
+  &:hover .btn__hover {
+    width: 100%;
+    height: 100%;
+    background-color: $cbg2;
+    border: 1.5px solid $color2;
+  }
+  &:hover span {
+    color: $color2;
+  }
+
+  .btn__hover {
+    width: ($w1/2);
+    height: 0px;
+    position: absolute;
+    border-radius: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    transition: all 300ms ease;
+    z-index: 66;
+  }
+
+  span {
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 99;
+    font-size: $font-size--small;
+  }
+}
