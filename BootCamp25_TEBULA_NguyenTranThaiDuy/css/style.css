@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -155,9 +154,7 @@ li {
 }
 
 .header-default {
-  /*  Mới đầu để background của header là transparent  */
   background: transparent;
-  /*  Để position absolute không ảnh hưởng đến các phần tử bên dưới  */
   position: absolute;
   top: 0;
   left: 0;
@@ -165,11 +162,8 @@ li {
 }
 
 .header-onscroll {
-  /*  để background white để thấy được header  */
   background: white;
-  /*  thêm box shadow tăng độ sâu  */
   box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.1);
-  /*  fixed scroll theo trang web  */
   position: fixed;
   top: 0;
   left: 0;
@@ -259,6 +253,11 @@ header .topbarmenu .button span {
   font-size: 13px;
 }
 
+@media only screen and (max-width: 1400px) {
+  .navbar-brand img {
+    transform: scale(80%);
+  }
+}
 .carousel {
   background-image: url("../../images/yellow_top_wave_01.png"), url("../../images/Violet_top_left_wave.png");
   background-position: top, bottom;
@@ -274,6 +273,14 @@ header .topbarmenu .button span {
   color: #000000 !important;
   font-size: 6rem;
   font-weight: 700;
+}
+@media only screen and (max-width: 1200px) {
+  .carousel {
+    margin-top: 9rem;
+  }
+  .carousel .carousel__title {
+    margin-top: 9rem;
+  }
 }
 .list {
   background-color: #dcd1f0;
@@ -443,6 +450,11 @@ header .topbarmenu .button span {
   font-size: 13px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .form-group {
+    width: 100%;
+  }
+}
 #footer {
   background-image: url("../../images/footer_background.jpg");
   background-position: center;
@@ -541,6 +553,12 @@ header .topbarmenu .button span {
   color: #fff;
   text-align: center;
   font-size: 13px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .widget-services h5 {
+    margin-top: 2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

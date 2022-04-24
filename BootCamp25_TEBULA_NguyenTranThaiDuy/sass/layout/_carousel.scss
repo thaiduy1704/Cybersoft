@@ -16,3 +16,11 @@
   &__content {
   }
 }
+@media only screen and (max-width: 1200px) {
+  .carousel {
+    margin-top: 9rem;
+    .carousel__title {
+      margin-top: 9rem;
+    }
+  }
+}

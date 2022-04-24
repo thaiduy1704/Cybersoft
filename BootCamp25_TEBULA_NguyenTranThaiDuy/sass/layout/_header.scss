@@ -1,7 +1,6 @@
 .header-default {
-  /*  Mới đầu để background của header là transparent  */
   background: transparent;
-  /*  Để position absolute không ảnh hưởng đến các phần tử bên dưới  */
+
   position: absolute;
   top: 0;
   left: 0;
@@ -9,11 +8,10 @@
 }
 
 .header-onscroll {
-  /*  để background white để thấy được header  */
   background: white;
-  /*  thêm box shadow tăng độ sâu  */
+
   box-shadow: 0 0 50px 0 rgb(0 0 0 / 10%);
-  /*  fixed scroll theo trang web  */
+
   position: fixed;
   top: 0;
   left: 0;
@@ -68,6 +66,13 @@ header {
         $color--btn-primary,
         $color--white
       );
+    }
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .navbar-brand {
+    img {
+      transform: scale(80%);
     }
   }
 }

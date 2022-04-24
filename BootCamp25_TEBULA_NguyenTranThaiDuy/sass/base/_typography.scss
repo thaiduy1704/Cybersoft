@@ -94,7 +94,7 @@ li {
   }
 
   .btn__hover {
-    width: ($w1/2);
+    width: calc($w1/2);
     height: 0px;
     position: absolute;
     border-radius: 50px;
