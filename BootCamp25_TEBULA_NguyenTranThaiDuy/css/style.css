@@ -117,6 +117,8 @@ li {
   border: none;
 }
 .card-list img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   overflow: hidden;
   transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
 }
@@ -180,12 +182,10 @@ li {
 }
 
 .header-default .nav-item {
-  padding: 55px 15px;
   transition: all 0.5s;
 }
 
 .header-onscroll .nav-item {
-  padding: 35px 15px;
   transition: all 0.5s;
 }
 
@@ -369,6 +369,7 @@ header .topbarmenu .button span {
   width: 40px;
   border: none;
   outline: none;
+  font-size: 14px;
 }
 .form .form__right .form-group .box3 > i {
   font-size: 14px;
