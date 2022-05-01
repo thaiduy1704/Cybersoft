@@ -37,8 +37,8 @@ function renderTableList(data) {
             <td>${people.loaiND}</td>
             <td>  
             <button class="btn btn-success"data-toggle="modal"
-                data-target="#myModal" onclick="updatePeople(${people.id})">-</button>
-            <button class="btn btn-danger" onclick="deletePeople(${people.id})">X</button>
+                data-target="#myModal" onclick="updatePeople(${people.id})">Sửa</button>
+            <button class="btn btn-danger" onclick="deletePeople(${people.id})">Xóa</button>
             </td>
         </tr>
         `
