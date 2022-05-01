@@ -1,0 +1,3 @@
+function PeopleList() {
+    this.list = []
+}

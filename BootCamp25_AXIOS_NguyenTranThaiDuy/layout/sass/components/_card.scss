@@ -1,0 +1,42 @@
+.card-list {
+  position: relative;
+  z-index: 2;
+  margin: 2rem;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  transition: 0.2s;
+  border: none;
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    transition: transform 650ms ease-in-out, filter 650ms ease-in-out;
+    &:hover {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+  }
+  .card__title {
+    display: block;
+    overflow: hidden;
+  }
+  .card-body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    text-align: center;
+    p {
+      @include styleText($color--btn-primary, $font-size--small, $fw-4);
+      margin-top: 0.5rem;
+    }
+    h2 {
+      @include styleText($color--black, $font-size--medium-1, $fw-5);
+    }
+    h6 {
+      @include styleText(#181818, $font-size--small, $fw-3);
+
+      line-height: 1.8em;
+    }
+  }
+}
