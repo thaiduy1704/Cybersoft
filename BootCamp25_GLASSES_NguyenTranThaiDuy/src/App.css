@@ -1,38 +1,70 @@
-.App {
+html,
+body {
+  font-size: 62.5%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background: url("../public/images/background.jpg") center no-repeat;
+  background-size: cover;
+  background-color: rgba(50, 70, 80, 0.5);
+  background-blend-mode: soft-light;
+}
+
+.header {
   text-align: center;
+  padding: 2rem;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.model img {
+  width: 20rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.model__target {
+  position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.model__glasses {
+  position: absolute;
+  background-color: transparent;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  mix-blend-mode: multiply;
 }
 
-.App-link {
-  color: #61dafb;
+.model__glasses img {
+  width: 11rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.glasses {
+  margin-top: 15rem;
+  background-color: rgba(50, 70, 80, 0.5);
 }
+
+.glasses__item {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+
+.glasses__item:hover {
+  border: 2px solid blue;
+}
+
+.glasses img {
+  width: 17rem;
+}
+
+/* Typography */
+h1 {
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+/* Utilities */

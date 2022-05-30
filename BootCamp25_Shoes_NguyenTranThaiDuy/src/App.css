@@ -1,0 +1,11 @@
+.app {
+  padding: 50px 10px;
+}
+
+.product__card {
+  width: 30%;
+}
+
+.product__image {
+  width: 300px;
+}
