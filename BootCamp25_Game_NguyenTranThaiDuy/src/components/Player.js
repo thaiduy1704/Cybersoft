@@ -1,7 +1,7 @@
 
 import { images } from "../images/images"
 import KeoBuaBao from "./KeoBuaBao"
-import { useDispatch, useSelector } from "react-redux"
+import {  useSelector } from "react-redux"
 const Player = () => {
     const { userChoice } = useSelector((store) => store.gameLogic)
 
