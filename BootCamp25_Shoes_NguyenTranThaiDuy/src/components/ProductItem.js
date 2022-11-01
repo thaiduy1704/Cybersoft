@@ -3,7 +3,7 @@ import { BsCartCheckFill } from "react-icons/bs";
 
 const ProductItem = ({ item, onClickModal }) => {
   const {
-    id,
+    
     name,
     alias,
     price,
