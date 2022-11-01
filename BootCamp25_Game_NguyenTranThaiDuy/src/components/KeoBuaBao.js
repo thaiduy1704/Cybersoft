@@ -15,7 +15,7 @@ const KeoBuaBao = () => {
         <div className='row' >
             {temp.map((_, index) => {
                 return (<div key={index} className='col-md-4' onClick={() => dispatch(makeChoice(index))}>
-                    <img className={`item ${userChoice === index ? "active" : ""}`} src={images[index]}  />
+                    <img className={`item ${userChoice === index ? "active" : ""}`} src={images[index]} alt= "name"/>
                 </div>)
             }
             )}
