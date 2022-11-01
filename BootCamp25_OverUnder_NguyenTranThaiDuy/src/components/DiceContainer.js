@@ -10,6 +10,8 @@ const DiceContainer = () => {
             <img src={ImageData[dice1]} alt="1" />
             <img src={ImageData[dice2]} alt="2" />
             <img src={ImageData[dice3]} alt="3" />
+            
+
 
         </Wrapper>
     )

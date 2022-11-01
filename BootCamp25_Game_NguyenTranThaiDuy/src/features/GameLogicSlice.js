@@ -17,6 +17,8 @@ export const startGame = createAsyncThunk('gameLogic/startGame', async (_, thunk
     return generateRandomNumber(0, 3)
 })
 
+
+
 const gameLogicSlice = createSlice({
     name: 'gameLogic', initialState, reducers: {
         makeChoice: (state, action) => {

@@ -15,7 +15,7 @@ const InfoTable = () => {
   )
 }
 const Wrapper = styled.div`
- text-align: center;
+  text-align: center;
   margin: 2rem auto;
   h1 {
     font-size: 3rem;

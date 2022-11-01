@@ -9,12 +9,13 @@ import InfoTable from "./components/InfoTable";
 function App() {
   return (
     <Wrapper className="container-fluid">
-      <div className="">
+      <div >
         <h1 className="title">Game Đổ xúc xắc</h1>
         <div className="container-center">
           <BoxChoice choice={0} />
           <DiceContainer />
           <BoxChoice choice={1} />
+          
         </div>
         <InfoTable />
       </div>

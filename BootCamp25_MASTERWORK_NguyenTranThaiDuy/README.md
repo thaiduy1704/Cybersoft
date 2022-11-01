@@ -4,7 +4,7 @@
    </a>
 </p>
 <h1 align="center">
-    Đồ án nhóm : MASTERWORK 
+    Đồ án nhóm :
 </h1>
 
 <h2>
@@ -20,7 +20,7 @@
    Giới thiệu nhóm
 </h2>
 
-- **Số thứ tự nhóm:** 14
+- **Số thứ tự nhóm:** 
 - **Thông tin thành viên**
 
 <table align="center">
